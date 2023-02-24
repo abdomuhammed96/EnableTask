@@ -19,5 +19,7 @@ public class SignInPageLogic extends SignInPageAbstract {
         writeInTextField(Password, testData.getProperty("Password"));
         clickOnElement(SignInBtn);
     }
+
+
 }
 

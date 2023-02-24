@@ -1,8 +1,13 @@
-Feature: Qareb Test Cases
+Feature: Mazady Main Test Cases
 
 
-  Scenario: Verify login flow on Qareb website
-	When Click on element on Home Page ["Open SignIn Page"]
-    And Verify that the Sign In Page is opened
-    Then Sign In
+  Scenario: Verify that user can login flow successfully on Mazady website
+    When Sign In
 
+
+
+
+  Scenario: Verify that user can add product successfully on Mazady website
+    When Sign In
+    When Open Add Product Page
+    And  Add Product

@@ -1,2 +1,2 @@
-# Qareb-Web-Testing-Automation
-For the Automation code for testing scenarios for Qareb Website
+# Mazady-Web-Testing-Automation
+For the Automation code for testing scenarios for Mazady Website

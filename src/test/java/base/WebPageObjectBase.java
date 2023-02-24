@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -44,4 +45,15 @@ public abstract class WebPageObjectBase {
         js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)", "");
     }
+
+
+    public void HoverOverElement(WebElement element) {
+
+        Actions action = new Actions(driver);
+
+      //Performing the mouse hover action on the target element.
+        action.moveToElement(element).perform();
+
+    }
+
 }

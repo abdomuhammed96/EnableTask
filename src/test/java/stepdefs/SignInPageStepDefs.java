@@ -1,19 +1,18 @@
 package stepdefs;
 
 import core.Config;
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.testng.Assert;
+import io.cucumber.java.en.When;
 import org.testng.asserts.SoftAssert;
 import pages.SignInPage.SignInPageAbstract;
 import pages.SignInPage.SignInPageLogic;
 
-public class RegistrationPageStepDefs {
+public class SignInPageStepDefs {
 
     private SignInPageAbstract page;
     SoftAssert softAssert;
 
-    public RegistrationPageStepDefs(Config config) {
+    public SignInPageStepDefs(Config config) {
         if (config.isWeb()) page = new SignInPageLogic();
         softAssert = new SoftAssert();
     }
@@ -21,13 +20,17 @@ public class RegistrationPageStepDefs {
         @Then("Sign In")
         public void click_on() throws InterruptedException {
         page.SignIn();
-
-
         }
 
-    @And("Verify that the Sign In Page is opened")
-    public void verifyThatTheSignInPageIsOpened() {
-       Assert.assertTrue(page.SignInHeader.isDisplayed());
+    @Then("check home page is displayed")
+    public void checkHomePageIsDisplayed() {
+
+    }
+
+    @When("Open Add Product Page")
+    public void openAddProductPage() {
+        page.HoverOverElement(page.profileIcon);
+        page.clickOnElement(page.addProdctIcon);
     }
 }
 
