@@ -25,7 +25,7 @@ public abstract class WebPageObjectBase {
     public WebPageObjectBase() {
         this.driver = Hooks.getWebDriver();
         PageFactory.initElements(this.driver, this);
-        wait = new WebDriverWait(driver, 60);
+        wait = new WebDriverWait(driver, 80);
     }
     public void waitForVisibility(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -55,5 +55,13 @@ public abstract class WebPageObjectBase {
         action.moveToElement(element).perform();
 
     }
+
+    public void selectElmentFromDropdownList(WebElement element,String option) {
+
+        Select fruits = new Select(element);
+        fruits.selectByVisibleText(option);
+
+    }
+
 
 }

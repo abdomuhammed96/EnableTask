@@ -1,13 +1,14 @@
-Feature: Mazady Main Test Cases
+Feature: Mazaady Main Test Cases
 
 
-  Scenario: Verify that user can login flow successfully on Mazady website
+  Scenario: Verify that user can login flow successfully on Mazaady website
     When Sign In
 
 
 
 
-  Scenario: Verify that user can add product successfully on Mazady website
+  Scenario: Verify that user can add product successfully on Mazaady website
     When Sign In
     When Open Add Product Page
     And  Add Product
+
