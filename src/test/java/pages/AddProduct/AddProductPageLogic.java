@@ -34,7 +34,6 @@ public class AddProductPageLogic extends AddProductPageAbstract {
         waitForVisibility(SelectedSubCategory);
         clickOnElement(SelectedSubCategory);
 
-
         ScrollDown();
         driver.switchTo().frame("tinymce_description_ifr");
         Thread.sleep(10000);
@@ -74,7 +73,6 @@ public class AddProductPageLogic extends AddProductPageAbstract {
 
         waitForVisibility(addToCart);
         clickOnElement(addToCart);
-
 
     }
 
