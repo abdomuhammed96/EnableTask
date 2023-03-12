@@ -1,15 +1,28 @@
-Feature: "Kader" Main Test Cases
+Feature: "Jawwy TV" Main Test Cases
 
 
-  Scenario: Verify that homepage is opened successfully 
-    When User opens Kader website
-    Then Verify that the homepage is opened
+  Scenario: Validate the Subscription Packages for UAE
+    When User opens Jawwy TV website
+    And Changes country to be "UAE"
+    Then Verify Subscription Packages type
+    And Verify Subscription Packages Currency for "UAE"
+    And Verify Subscription Packages Price for "UAE"
+
+  Scenario: Validate the Subscription Packages for Algeria
+    When User opens Jawwy TV website
+    And Changes country to be "Algeria"
+    Then Verify Subscription Packages type
+    And Verify Subscription Packages Currency for "Algeria"
+    And Verify Subscription Packages Price for "Algeria"
+
+  Scenario: Validate the Subscription Packages for Jordan
+    When User opens Jawwy TV website
+    And Changes country to be "Jordan"
+    Then Verify Subscription Packages type
+    And Verify Subscription Packages Currency for "Jordan"
+    And Verify Subscription Packages Price for "Jordan"
 
 
-  Scenario: Verify that user can navigate to "looking for a work" page
-    When User opens Kader website
-    And  clicks on looking for a work button
-    Then Verify that the user can normally explore the looking for a work page
 
 
 

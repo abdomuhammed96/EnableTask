@@ -7,9 +7,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="JawwyWebAutomationTesting" />
         <module name="QPROS-Task" />
         <module name="TamatemWebAutomation" />
-        <module name="KaderWebAutomationTesting" />
       </profile>
     </annotationProcessing>
   </component>

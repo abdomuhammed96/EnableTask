@@ -19,29 +19,31 @@ public class HomePageStepDefs {
         softAssert = new SoftAssert();
     }
 
-    @When("User opens Kader website")
-    public void userOpensKaderWebsite() {
-        //Just to make the scenario more readable
+    @When("User opens Jawwy TV website")
+    public void userOpensJawwyTVWebsite() {
+        // Just for making the scenario readable
     }
 
-    @Then("Verify that the homepage is opened")
-    public void verifyThatTheHomepageIsOpened() {
-        page.waitForVisibility(page.homePageHeaderline);
-        Assert.assertTrue(page.homePageHeaderline.isDisplayed());
+    @And("Changes country to be {string}")
+    public void changesCountryToBe(String arg0) {
+        page.changeCountry(arg0);
+
     }
 
-
-    @And("clicks on looking for a work button")
-    public void clicksOnLookingForAWorkButton() {
-        page.waitForVisibility(page.lookingForWorkButton);
-        page.clickOnElement(page.lookingForWorkButton);
+    @Then("Verify Subscription Packages type")
+    public void verifySubscriptionPackagesType() {
+        page.verifySubscriptionPackages();
     }
 
-    @Then("Verify that the user can normally explore the looking for a work page")
-    public void verifyThatTheUserCanNormallyExploreTheLookingForAWorkPage() {
-        page.waitForVisibility(page.lookingForWorkPageHeaderline);
-        Assert.assertTrue(page.lookingForWorkPageHeaderline.isDisplayed());
-        page.ScrollDown();
+    @And("Verify Subscription Packages Price for {string}")
+    public void verifySubscriptionPackagesPriceFor(String arg0) {
+       page.checkCountryPackagesPrices(arg0);
+    }
+
+    @And("Verify Subscription Packages Currency for {string}")
+    public void verifySubscriptionPackagesCurrencyFor(String arg0) {
+        page.checkCountryPackagesCurrency(arg0);
+
     }
 }
 
