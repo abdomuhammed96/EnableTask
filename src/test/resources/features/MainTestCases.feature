@@ -1,26 +1,11 @@
-Feature: "Jawwy TV" Main Test Cases
+Feature: "Enable.Tech" Assessment
 
 
-  Scenario: Validate the Subscription Packages for UAE
-    When User opens Jawwy TV website
-    And Changes country to be "UAE"
-    Then Verify Subscription Packages type
-    And Verify Subscription Packages Currency for "UAE"
-    And Verify Subscription Packages Price for "UAE"
+  Scenario: Validate check out process
+    When user logins
+    And Adds a product to shopping cart
+    And opens the shopping cart
 
-  Scenario: Validate the Subscription Packages for Algeria
-    When User opens Jawwy TV website
-    And Changes country to be "Algeria"
-    Then Verify Subscription Packages type
-    And Verify Subscription Packages Currency for "Algeria"
-    And Verify Subscription Packages Price for "Algeria"
-
-  Scenario: Validate the Subscription Packages for Jordan
-    When User opens Jawwy TV website
-    And Changes country to be "Jordan"
-    Then Verify Subscription Packages type
-    And Verify Subscription Packages Currency for "Jordan"
-    And Verify Subscription Packages Price for "Jordan"
 
 
 
